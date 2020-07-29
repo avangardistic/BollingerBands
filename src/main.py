@@ -59,7 +59,7 @@ def is_near_to_bb(ud: bool, price: int, bb):
         else:
             return False
     elif ud == True:
-        if distance(df['Bollinger High'].iloc[window], price) <= high:
+        if distance(df['Bollinger High'].iloc[window], price) >= high:
             # print(distance(int(df['Bollinger Low'].iloc[window]), price))
             return True
         else:
