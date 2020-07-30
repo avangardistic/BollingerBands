@@ -50,7 +50,7 @@ def distance(a, b):
         return math.copysign((abs(a) + abs(b)), b)
 
 
-def is_near_to_bb(ud: bool, price: int, bb):
+def bb_cross(ud: bool, price: int, bb):
     """Retrun true if the price is near to the bb up or down! for bollinger high make `ud` true & for bollinger low make `ud` false"""
     if ud == False:
         if distance(df['Bollinger Low'].iloc[window], price) <= low:
@@ -84,4 +84,4 @@ if __name__ == "__main__":
         print(parser.usage)
         exit()
 
-    print(is_near_to_bb(ud=False, price=41470, bb=bollinger(df=df)))
+    print(bb_cross(ud=False, price=41470, bb=bollinger(df=df)))
