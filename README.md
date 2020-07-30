@@ -1,3 +1,3 @@
 # Bollinger Bands Calculator
 
-Find all bollinger low stocks in the market
+Calculate Bollinger bands and find bollinger bands cross
